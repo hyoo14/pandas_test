@@ -1,7 +1,24 @@
+# export_values.py
+"""
+엑셀 파일로부터 제한할 권한을 추출
+
+사용 가능 함수:
+-export_values
+"""
 import pandas as pd
 
 
 def export_value(file_path):
+    """
+    제한할 권한을 추출하는 함수.
+
+    Args:
+        file_path: 엑셀파일이 위치한 path
+
+    Returns:
+        json형태로 그룹.세부그룹.직챙 당 제한할 권한 코드 반환
+
+    """
     #authors = pd.read_excel("맘스터치권한세팅.xlsx")
     authors = pd.read_excel(file_path)
     #print(authors)
